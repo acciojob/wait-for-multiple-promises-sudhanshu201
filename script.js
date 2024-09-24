@@ -27,7 +27,7 @@ let startTime = Date.now()
 //show the loading row
 document.getElementById("output").innerHTML =
 `
-<tr id='loading-row'>
+<tr id='loading'>
     <td colspan="2">Loading...</td>
 </tr>
 `
@@ -37,7 +37,7 @@ Promise.all([myPromise1,myPromise2,myPromise3])
     //calculate the total time taken
     let totalTime = (Date.now() - startTime) / 1000;
     // Remove the loading row
-  document.getElementById("loading-row").remove();
+  document.getElementById("loading").remove();
 
 	// Populate the table with the resolved promises and times
     let outputHTML = `
